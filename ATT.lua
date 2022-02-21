@@ -1967,11 +1967,11 @@ function ATT:CreateOptions()
     cpanel2:SetPoint("TOPLEFT",panel,"TOPLEFT",10,-482)
 
     local version =  panel:CreateFontString(nil,"ARTWORK","GameFontDisable")
-    version:SetText("|cffffff00Version:|r |cff33ff99v"..ATTversion.."|r by |cffffff00izy|r")
+    version:SetText("|cffffff00Version:|r |cff33ff99v"..ATTversion.."MoP|r by |cffffff00izy|r      [ backport by |cff7443b5cyber|r ] ")
     version:SetPoint("TOPLEFT",panel,"TOPLEFT",20,-540)
 
     local contact =  panel:CreateFontString(nil,"ARTWORK","GameFontDisable")
-    contact:SetText("[ Contact: curseforge.com/wow/addons/att ]")
+    contact:SetText("[ Contact: github.com/SushiWoW/MoP-ATT ]")
     contact:SetPoint("TOPRIGHT",panel,"TOPRIGHT",-20,-540)
 
     self:CreateAbilityEditor()
