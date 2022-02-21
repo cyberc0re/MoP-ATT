@@ -179,8 +179,8 @@ function ATT:InspectIsReady(guid, inspectedUnit)
 end
 
 function ATT:InspectPlayer()
-    local unit = "player"
     playerGUID = UnitGUID("player")
+    local unit = self:FindUnitByGUID(playerGUID)    
     self:InspectIsReady(playerGUID, unit)
 end
 
@@ -940,6 +940,14 @@ function ATT:PLAYER_ENTERING_WORLD()
         end)
 end
 
+function ATT:PLAYER_ALIVE()
+    ATTInspectFrame:Hide() -- just in case a bug
+    C_Timer.After(7, function() self:InspectPlayer() self:StopAllGlow() self:UpdateGroup() self:Dampening()
+    local inInstance, instanceType = IsInInstance()
+    if instanceType == "arena" then self:StopAllIcons(); end
+    end)
+end
+
 function ATT:SPELLS_CHANGED()
     C_Timer.After(2, function() self:InspectPlayer() self:UpdateGroup() end)
 end
@@ -1623,6 +1631,7 @@ end
 
 local function ATT_OnLoad(self)
     self:RegisterEvent("PLAYER_ENTERING_WORLD")
+    self:RegisterEvent("PLAYER_ALIVE")
     self:RegisterEvent("SPELLS_CHANGED")
     self:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
     self:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
