@@ -18,7 +18,6 @@ Features
 - PvP Trinkets cooldown share with racials such as EMfH, Stoneform, etc. 
 - Shows only the talents and trinkets that are currently selected / equipped.
 - Attach icon frames to party or raid frames.(Blizzard , ElvUI, Tukui, oUF, Grid2, etc..)
-- Works with Covenant abilities and soulbinds cooldown reductions 
 - Show dampening percentage (%) in arena under the remaining time.
 - Sound alerts for abilities , play a sound when selected cooldowns are activated.
 - Option to sort icons order for each spec by changing icon showing priority.
@@ -35,3 +34,4 @@ Known Issues:
 - Desaturate for spells with charges non-functional. Will add option to disable desaturation.
 - Disabling borders requires a reload.
 - Unable to change font for timer.
+- Untested in PvP with functions such as Dampening %
