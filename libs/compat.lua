@@ -111,9 +111,9 @@ function CooldownFrame_CreateCooldownTimer(parent)
 	parent.timer = timer
 
 	local text = timer:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-	text:Point("CENTER", 1, 1)
+	text:SetPoint("CENTER", 1, 1)
 	text:SetJustifyH("CENTER")
-	text:FontTemplate(nil, (floor(parent:GetWidth() * 0.55)), "OUTLINE")
+	text:SetFont([[Interface\Addons\ATT\media\fonts\Expressway.ttf]], (floor(parent:GetWidth() * 0.55)), "OUTLINE")
 	timer.text = text
 
 	-- keep this after Cooldown_OnSizeChanged
